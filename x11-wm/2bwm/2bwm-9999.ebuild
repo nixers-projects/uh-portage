@@ -21,13 +21,10 @@ RDEPEND="x11-libs/xcb-util
 	x11-libs/xcb-util-keysyms"
 DEPEND="${RDEPEND}"
 
-src_prepare() {
-	restore_config config.h
-}
-
 src_compile() {
 	epatch "${FILESDIR}/${PV}-Makefile.diff"
 	LDFLAGS=" -L/usr/lib"
+	restore_config config.h
 	emake || die "Compile failed"
 }
 
