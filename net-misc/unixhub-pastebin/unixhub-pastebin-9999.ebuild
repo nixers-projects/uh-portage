@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=2
+EAPI=1
 
 inherit git-2
 
@@ -18,10 +18,6 @@ IUSE=""
 
 DEPEND="dev-python/mechanize"
 RDEPEND="${DEPEND}"
-
-src_prepare() {
-	sed -i -e 's/python2/python' hub
-}
 
 src_install() {
 	dobin hub
