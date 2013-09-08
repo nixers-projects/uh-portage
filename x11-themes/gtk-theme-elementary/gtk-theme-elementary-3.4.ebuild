@@ -15,7 +15,8 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE="+gtk2 +gtk3 metacity xfwm"
 
-DEPEND=""
+DEPEND="gtk2? ( x11-themes/gtk-engines-murrine )
+	gtk3? ( x11-themes/gtk-engines-unico )"
 RDEPEND="${DEPEND}"
 
 src_install() {
