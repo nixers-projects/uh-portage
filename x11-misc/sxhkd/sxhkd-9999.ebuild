@@ -25,7 +25,7 @@ src_compile() {
 }
 
 src_install() {
-	make PREFIX=/usr DESTDIR="${D}"
+	make PREFIX=/usr DESTDIR="${D}" install
 
 	dodoc README.asciidoc
 	dodoc LICENSE
