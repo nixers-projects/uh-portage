@@ -1,0 +1,37 @@
+# Copyright 1999-2013 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: $
+
+EAPI=4
+
+inherit git-2
+
+DESCRIPTION="A colorful wrapper for terminal programs"
+HOMEPAGE="https://github.com/jeekl/cope"
+SRC_URI=""
+EGIT_REPO_URI="git://github.com/jeekl/cope.git"
+
+LICENSE="GPL-2 Artistic"
+SLOT="0"
+KEYWORDS="~amd64 ~x86"
+
+DEPEND="dev-perl/Class-Inspector
+dev-perl/File-ShareDir
+dev-perl/List-MoreUtils
+dev-perl/Params-Util
+dev-perl/regexp-common
+dev-perl/Regexp-IPv6
+dev-perl/Env-Path
+dev-perl/IO-Stty
+dev-perl/IO-Tty"
+RDEPEND="${DEPEND}"
+
+src_compile() {
+	perl Makefile.PL INSTALLDIRS=vendor
+	emake
+}
+
+src_install() {
+	emake DESTDIR="${D}" install
+	dobin cope_path.pl
+}
