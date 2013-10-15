@@ -26,6 +26,10 @@ dev-perl/IO-Stty
 dev-perl/IO-Tty"
 RDEPEND="${DEPEND}"
 
+src_prepare() {
+	epatch ${FILESDIR}/${PV}-remove_no_experimental_warnings.diff
+}
+
 src_compile() {
 	perl Makefile.PL INSTALLDIRS=vendor
 	emake
