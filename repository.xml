@@ -1,0 +1,15 @@
+<repositories version="1.0">
+	<repo quality="experimental" status="unofficial">
+		<name>UnixHub-Portage</name>
+		<description>
+			UnixHub Gen/Funtoo overlay
+		</description>
+		<homepage>
+			https://github.com/UnixHub/UnixHub-Portage
+		</homepage>
+		<owner>
+			<email></email>
+		</owner>
+		<source type="git">git://github.com/UnixHub/UnixHub-Portage.git</source>
+	</repo>
+</repositories>
