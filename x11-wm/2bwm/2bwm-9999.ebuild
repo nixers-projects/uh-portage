@@ -22,7 +22,6 @@ RDEPEND="x11-libs/xcb-util
 DEPEND="${RDEPEND}"
 
 src_compile() {
-	epatch "${FILESDIR}/${PV}-Makefile.diff"
 	LDFLAGS=" -L/usr/lib"
 	restore_config config.h
 	emake || die "Compile failed"
