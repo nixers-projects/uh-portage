@@ -1,6 +1,8 @@
 UnixHub-Portage
 ===============
 
+__Notice__: This repo is not being updated anymore, pull requests may be accepted.
+
 UnixHub Gen/Funtoo portage overlay.
 
 ## Use it!
