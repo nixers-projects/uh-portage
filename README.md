@@ -1,5 +1,5 @@
-UnixHub-Portage
-===============
+uh-portage
+==========
 
 __Notice__: This repo is not being updated anymore, pull requests may be accepted.
 
